@@ -12,22 +12,23 @@ Dashboard - Library
     <div class="col-lg-6">
         <div class="card ">
             <div class="card-body mt-4 mb-2">
-                <form class="row g-3">
+                <form class="row g-3" method="post" action="">
+                    {% csrf_token %}
                     <div class="col-md-12">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="roll_no" placeholder="Roll no">
+                            <input type="text" class="form-control" id="roll_no" name="rollno" placeholder="Roll no">
                             <label for="roll_no">Roll no</label>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="bookid" placeholder="Book id">
+                            <input type="text" class="form-control" id="bookid" name="bookid" placeholder="Book id">
                             <label for="bookid">Book id</label>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="copyno" placeholder="Copy no">
+                            <input type="number" class="form-control" id="copyno" name="copyno" placeholder="Copy no">
                             <label for="copyno">Copy no</label>
                         </div>
                     </div>
@@ -49,16 +50,16 @@ Dashboard - Library
 
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Books that need to returned today</h5>
+                    <h5 class="card-title">Books that need to be returned today</h5>
                     <!-- Table with stripped rows -->
                     <table class="table datatable" style=" overflow:hidden;overflow-y: scroll;">
                         <thead>
                         <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Author</th>
-                            <th scope="col">Edition</th>
-                            <th scope="col">Date Posted</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">Rollno</th>
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Book ID</th>
+                            <th scope="col">Book name</th>
+                            <th scope="col">Copy number</th>
                         </tr>
                         </thead>
                         <tbody>
