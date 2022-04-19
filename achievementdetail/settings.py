@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,7 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # authentication apps
+    'social_django',
+
+    # custom apps
+    'login',
+    'record',
 ]
+
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.azuread_tenant.AzureADTenantOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -47,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'achievementdetail.urls'
@@ -62,12 +75,22 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # social auth
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'achievementdetail.wsgi.application'
+
+
+SOCIAL_AUTH_AZUREAD_TENANT_OAUTH2_KEY = 'f022432b-b0b6-47cd-9165-8ddc88d87707'
+
+SOCIAL_AUTH_AZUREAD_TENANT_OAUTH2_SECRET = 'jdh7Q~9dWz6yZW9cKSTukqykpBpISfHwZYbLF'
+SOCIAL_AUTH_AZUREAD_TENANT_OAUTH2_TENANT_ID = '6b8b8296-bdff-4ad8-93ad-84bcbf3842f5'
 
 
 # Database
@@ -119,7 +142,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 
+
+# media
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGIN_URL = '/'
+LOGOUT_URL = '/'
+LOGIN_REDIRECT_URL = '/dashboard/'

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conference Presentation</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+        {% load static %} <link rel="stylesheet"  href="{% static 'style.css' %}" >
+
+    </head>
+
+    <body>
+        <br>
+<h1>Conference Presentation</h1>
+        <form class="form-control">
+        <label for="" id="label">6. Publication Type</label>
+        <br>
+        <select id="publicationtype">
+            <option value="publicationtype">Select your answer</option>
+            <option value="">Published</option>
+            <option value="">Presented</option>
+            <option value="">Others</option>
+        </select>
+        <br><br>
+
+        <label for="" id="label">7. Collaborative Event</label>
+            <br>
+            <input type="radio" name="colloborativeevent">Yes<br>
+            <input type="radio" name="colloborativeevent">No<br>
+            <br><br>
+            
+            <label for="" id="label">8. Collabration</label>
+            <br>
+            <select id="colloboration" name="colloboration">
+                <option value="colloboration">Select your answer</option>
+                <option value="">Self</option>
+                <option value="">Students</option>
+                <option value="">Industry</option>
+                <option value="">Internal Faculty Member</option>
+                <option value="">External faculty Member</option>
+            </select>
+
+        <br><br>
+
+                 <label for="" id="label">9. Name of the Authors</label>
+                 <br>
+                 <input type="text" name="authorname" placeholder="Enter your answer">
+                  <br><br>
+
+                   <label for="" id="label">10. Title of the Paper</label>
+                    <br>
+                    <input type="text" name="papername" placeholder="Enter your answer">
+                    <br><br>
+
+
+                <label for="" id="label">11. Name of the Guide</label>
+                <br>
+                <select id="guidename" name="guidename">
+                    <option value="guidename">Select your answer</option>
+                    <option value="">Dr.P.Devaki</option>
+                    <option value="">Dr.J.Cynthia</option>
+                    <option value="">Dr.K.R.Baskaran</option>
+                    <option value="">Dr.L.Latha</option>
+                    <option value="">Dr.N.Suganthi</option>
+                    <option value="">Dr.S.Rajini</option>
+                    <option value="">Dr.E.A.Vimal</option>
+                    <option value="">Dr.V.P.Sumathi</option>
+                    <option value="">Dr.D.Sathya</option>
+                    <option value="">Ms.C.Bharathi Priya</option>
+                    <option value="">Dr.V.Sudha</option>
+                    <option value="">Mr.S.P.Siddique Ibrahim</option>
+                    <option value="">Ms.S.Nithya Roopa</option>
+                    <option value="">Ms.D.Aswini</option>
+                    <option value="">Mr.V.Senthil Kumar</option>
+                    <option value="">Ms.X.Francis Jency</option>
+                    <option value="">Mr.G.Kanagaraj</option>
+                    <option value="">Ms.S.Uma Maheswari</option>
+                    <option value="">Ms.D.Yamunathangam</option>
+                    <option value="">Ms.N.Jeba</option>
+                    <option value="">Ms.S.J.Syed ali Fathima</option>
+                    <option value="">Mr.R.Kirubakaran</option>
+                    <br><br>
+
+                    <label for="" id="label">12. Category</label>
+                    <br>
+                    <select id="category" name="category">
+                        <option value="category">Select your answer</option>
+                        <option value="">National</option>
+                        <option value="">International</option>
+                        <option value="">UGC</option>
+                        <option value="">Others</option>
+                    </select>
+                    <br><br>
+
+                    <label for="" id="label">13. Type</label>
+                    <br>
+                    <select id="types" name="types">
+                        <option value="types">Select your answer</option>
+                        <option value="">Journal</option>
+                        <option value="">Conference</option>
+                        <option value="">Symposium</option>
+                    </select>
+                    <br><br>
+
+                    <label for="" id="label">14. Name of the Conference/Journal</label>
+                    <br>
+                    <input type="text" name="conferencename" placeholder="Enter your answer">
+                    <br><br>
+
+                    <label for="" id="label">15. Organized by</label>
+                    <br>
+                    <input type="text" name="organizedname" placeholder="Enter your answer">
+                    <br><br>
+
+                    <label for="" id="label">16. From Date(Month/Day/YYY) </label>
+                    <br>
+                    <input type="date" name="fromdate" min="2016-01-01" max="2024-01-01" placeholder="Please input date (dd/mm/yyyy)">
+                    <br><br>
+        
+                    <label for="" id="label">17. To Date(Month/Day/YYY) </label>
+                    <br>
+                    <input type="date" name="todate" min="2016-01-01" max="2024-01-01" placeholder="Please input date (dd/mm/yyyy)">
+                    <br><br>
+
+                    <label for="" id="label">18. Whether it is a Paid journal?</label>
+                    <br>
+                    <select id="paid" name="paidstatus">
+                        <option value="paid">Select your answer</option>
+                        <option value="">Yes</option>
+                        <option value="">No</option>
+                    </select>
+                    <br><br>
+
+                    <label for="" id="label">19. Indexing</label>
+                    <br>
+                    <select id="index" name="indexing">
+                        <option value="index">Select your answer</option>
+                        <option value="">Scopus</option>
+                        <option value="">Web of Science</option>
+                        <option value="">SCI</option>
+                        <option value="">SCIE</option>
+                        <option value="">UGC</option>
+                        <option value="">Non-Scopus</option>
+                        <option value="">Annexure-I</option>
+
+                    </select>
+                    <br><br>
+
+                    <label for="" id="label">20. ISSN/ISBN Number </label>
+                    <br>
+                    <input type="number"  name="issnorisbnnumber" placeholder="The value must be a number">
+                    <br><br>
+
+                    <label for="" id="label">21. Impact Factor </label>
+                    <br>
+                    <input type="text" size="25" name="impactfactor" placeholder="The value must be a number">
+                    <br><br>
+
+                    <label for="" id="label">22. Month of publication</label>
+                    <br>
+                    <select id="month" name="monthofpublication">
+                        <option value="month">Select your answer</option>
+                        <option value="">January</option>
+                        <option value="">February</option>
+                        <option value="">March</option>
+                        <option value="">April</option>
+                        <option value="">May</option>
+                        <option value="">June</option>
+                        <option value="">July</option>
+                        <option value="">August</option>
+                        <option value="">September</option>
+                        <option value="">October</option>
+                        <option value="">November</option>
+                        <option value="">December</option>
+                    </select>
+                    <br><br>
+
+                    <label for="" id="label">23. Year of publication</label>
+                    <br>
+                    <select id="year" name="yearofpublication">
+                        <option value="year">Select your answer</option>
+                        <option value="">2019</option>
+                        <option value="">2020</option>
+                        <option value="">2021</option>
+                        </select>
+                        <br><br>
+
+                        <label for="" id="label">24. Volume </label>
+                        <br>
+                        <input type="number"  name="volume" placeholder="The value must be a number">
+                        <br><br>
+
+                        <label for="" id="label">25. Issue Number </label>
+                        <br>
+                        <input type="number" name="issuenumber" placeholder="The value must be a number">
+                        <br><br>
+
+                        <label for="" id="label">26. Page Number </label>
+                        <br>
+                        <input type="number"  name="pagenumber" placeholder="The value must be a number">
+                        <br><br>
+
+                        <label for="" id="label">18. Proof for Archive(Conference Certificate and  Published copy of the paper)</label>
+                           <br>
+                        <input type="File"  name="b"    placeholder="Upload file">
+                         <br><br>
+                           
+                         <input id=submit-btn type="submit" name="b" placeholder="Next">
+                    </form>
+
+
+                   
+
+
+             
+
+           
+    </body>
+</html>

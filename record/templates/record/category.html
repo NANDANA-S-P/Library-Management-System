@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Category Page</title>
+        
+    </head>
+
+    <body>
+        <p>Login succcessfullllllllll</p>
+    <h5>Name:{{userdet.username}}</h5>
+
+    <h5>Rollnumber:{{userdet.rollnum}}</h5>
+
+    <h5>Email:{{userdet.email}}</h5>
+
+    <h5>Department:{{userdet.department}}</h5>
+
+
+        <!-- <form name="category">
+            <label for="" id="label"></label>Category</label>
+            <br>
+            <select name="category" id='category'>
+                <option value="nothing" selected="selected">Select your answer</option>
+                
+                <option value="co-ex.html" >Cocurricular and Extra-curricular Activities</option>
+                <option value="conference.html" >Conference and Paper Presentation</option>
+                <option value="project.html" >Project Presentation</option>
+                <option value="scholarship.html" >Scholarship</option>
+                <option value="compexam.html" >Competitve Examination</option>
+                </select>
+                <br><br>
+
+                <input id="submit-btn" type="submit" value="Submit">-->
+                <!-- </form> --> 
+
+                <a href="/coex/">Cocurricular and Extra-curricular Activities</a><br>
+                <a href="/conference/">Conference and Paper Presentation</a><br>
+                <a href="/project/">Project Presentation</a><br>
+                <a href="/scholarship/">Scholarship</a><br>
+                <a href="/compexam/">Competitve Examination</a>
+
+
+
+                <script type="text/javascript">
+                    var  urlMenu=document.getElementById('category');
+                    urlMenu.onchange=function(){
+                        var userOption=this.options[this.selectedIndex];
+                        if(userOption.value !="nothing"){
+                            window.open(userOption.value,"Category Page","");
+                        }
+
+                    }
+                </script>
+    </body>
+
+    
+    </script>
+</html>

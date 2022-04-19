@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <h1>Co-Curricular and Extra Co-Curricular Activities Form</h1>
+    <form
+      class="form-control"
+      method="post"
+      action=""
+      enctype="multipart/form-data"
+    >
+      {% csrf_token%}
+      <label for="" id="label">6. Event type(Attended)</label>
+      <br />
+      <select id="eventtype" name="event_type">
+        <option value="">Select your answer</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Seminar">Seminar</option>
+        <option value="Guest Lecture">Guest Lecture</option>
+        <option value="Outreach Programme">Outreach Programme</option>
+        <option value="Certification Course">Certification Course</option>
+        <option value="Sports">Sports</option>
+        <option value="One credit course">One credit course</option>
+        <option value="NCC">NCC</option>
+      </select>
+      <br /><br />
+
+      <label for="" id="label">7. Sponsored/Colloboration</label>
+      <br />
+      <select id="Sponsored" name="sponsoredorcolloboration">
+        <option value="">Select your answer</option>
+        <option value="Industry">Industry</option>
+        <option value="Foreign University">Foreign University</option>
+        <option value="Internal">Internal</option>
+        <option value="External">External</option>
+        <option value="NPTEL">NPTEL</option>
+        <option value="Coursera">Coursera</option>
+        <option value="EDX">EDX</option>
+        <option value="Udemy">Udemy</option>
+        <option value="Others">Others</option>
+      </select>
+      <br />
+      <br />
+
+      <label for="" id="label"
+        >8. Name of the Event/Title of the Program/Certification Name/Award
+        Name/Sport Event Name</label
+      >
+      <br />
+      <input type="text" name="event_name" placeholder="Enter your answer" />
+      <br />
+      <br />
+
+      <label for="" id="label"
+        >9. Achievements(Awards/Recognition/Prize,if any)</label
+      >
+      <br />
+      <select id="Achievements" name="achievement">
+        <option value="Achievements">Select your answer</option>
+        <option value="First">First</option>
+        <option value="Second">Second</option>
+        <option value="Third">Third</option>
+        <option value="Participation">Participation</option>
+        <option value="Others">Others</option>
+      </select>
+      <br /><br />
+
+      <label for="" id="label">10. Level</label>
+      <br />
+      <input value="Zonal" type="radio" name="level" />Zonal<br />
+      <input value="District" type="radio" name="level" />District<br />
+      <input value="State" type="radio" name="level" />State<br />
+      <input value="National" type="radio" name="level" />National<br />
+      <input
+        value="International"
+        type="radio"
+        name="level"
+      />International<br />
+      <input value="Regional" type="radio" name="level" />regional<br />
+      <input value="Other" type="radio" name="level" />Other<br />
+      <br />
+
+      <label for="" id="label">11. Organization Agency/Institution Name </label>
+      <br />
+      <input
+        type="text"
+        name="organizationorinstitutionname"
+        placeholder="Enter your answer"
+      />
+      <br /><br />
+
+      <label for="" id="label">12. From Date(Month/Day/YYY) </label>
+      <br />
+      <input
+        type="date"
+        name="fromdate"
+        min="2016-01-01"
+        max="2024-01-01"
+        placeholder="Please input date (dd/mm/yyyy)"
+      />
+      <br />
+      <br />
+
+      <label for="" id="label">13. To Date(Month/Day/YYY) </label>
+      <br />
+      <input
+        type="date"
+        name="todate"
+        min="2016-01-01"
+        max="2024-01-01"
+        placeholder="Please input date (dd/mm/yyyy)"
+      />
+      <br />
+      <br />
+
+      <label for="" id="label">14. Number of Days </label>
+      <br />
+      <input
+        type="text"
+        size="25"
+        name="days"
+        placeholder="The value must be a number"
+      />
+      <br />
+      <br />
+
+      <label for="" id="label">15. Amount Sponsered by </label>
+      <br />
+      <select id="Amount Sponsered by" name="amountsponsored">
+        <option value="Amount Sponsered by">Select your answer</option>
+        <option value="External Agency">External Agency</option>
+        <option value="KCT">KCT</option>
+        <option value="Self">Self</option>
+        <option value="Not Applicable">Not Applicable</option>
+      </select>
+      <br />
+      <br />
+
+      <label for="" id="label"
+        >16. If External Agency,Name of the agency:</label
+      >
+      <br />
+      <input
+        type="text"
+        name="externalagency"
+        placeholder="Enter your answer"
+      />
+      <br /><br />
+
+      <label for="" id="label">17. Amount Received</label>
+      <br />
+      <input
+        type="text"
+        size="25"
+        name="amountreceived"
+        placeholder="The value must be a number"
+      />
+      <br /><br />
+
+      <label for="" id="label"
+        >18. Proof for Archive(Proof name to be mentioned as your name.Event
+        Name)</label
+      >
+      <br /><br />
+      <input type="File" name="proof" placeholder="Upload file" />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Competitive Exam
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+	{% load static %}<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" >
+
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+         
+    {% load static %} <script src="{% static 'script.js' %}" ></script>
+</head>
+
+<body>
+    <section class="s2">
+		<div class="main-container">
+			<a href=""></a>
+			<h1>Competitive Exam</h1>
+			<form id="Competitive-form" class="was-validated" method="post" action="/forms">
+				{% csrf_token %}
+				<a id="Competitive-form" name="Competitive_Examination"></a>
+
+				<label for="" id="label">6. Exam Name</label>
+				<br>
+				<input type="text" name="exam_name" placeholder="">
+				<br> <br>
+
+				<label for="" id="label">7. Register Number</label>
+				<br>
+				<input type="text" name="reg_number" placeholder="Enter your answer">
+				<br> <br>
+
+				<label for="" id="label">8. Date(Month/Day/YYY) </label>
+				<br>
+				<input type="date" name="date" min="2016-01-01" max="2024-01-01" placeholder="Please input date (dd/mm/yyyy)">
+				<br> <br>
+
+				<label for="" id="label">9. Marks</label>
+				<br>
+				<input type="number"  name="marks" placeholder="The value must be number">
+				<br><br>
+				
+				<label for="" id="label">10. Qualified</label>
+				<br>
+				<select id="qualified" name="qualified">
+					<option value="bool">Select your answer</option>
+					<option value="">Yes</option>
+					<option value="">No</option>
+				</select>
+				<br><br>
+
+				<label for="" id="label">11. Success Details</label>
+				<br>
+				<input type="textarea" name="success_details" placeholder="">
+				<br> <br>
+
+				<input id="submit-btn" type="submit" value="Submit">
+			</form>
+		</div>
+	</section> 
+</body>
+</html>

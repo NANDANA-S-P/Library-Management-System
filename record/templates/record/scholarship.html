@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Scholarship-Form
+    </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+	{% load static %} <link rel="stylesheet"  href="{% static 'style.css' %}" >
+
+	
+
+         
+    <!--{% load static %} <script src="{% static 'script.js' %}" ></script>-->
+</head>
+
+<body>
+    <section class="s2">
+		<div class="main-container">
+			<a href=""></a>
+			<h1>Scholarship</h1>
+			<form class="form-control">
+				{% csrf_token %}
+		
+				<a id="scholarship_info" name="Scholarship"></a>
+				<br>
+
+				<label for="name">6. Sponsoring Agency</label>
+				<input  id="name" type="text" name="sponsor_agency" required>
+				<br>	<br>
+
+				<label for="name">7. Name of the Sponsorship Scheme</label>
+				<input  id="name" type="text" name="scheme_name" required>
+				<br>	<br>
+
+				<label for="name">8. Amount Received (in Rupees)</label>
+				<input   id="name" type="number" name="amount" required>
+				<br>	<br>
+
+				<label for="name">9. Month and Year of Receipt</label>
+				<input   id="name" type="date" name="year_receipt" required>
+				<br>	<br>
+
+			     <label for="">10. Proof (Bank statement/Stipend Receipt)</label>
+                <br>
+                 <input type="File"  name="proof"   placeholder="Upload file">
+                <br>
+				<br>
+
+				<input id="submit-btn" type="submit" value="Submit">
+			</form>
+		</div>
+	</section> 
+</body>
+</html>
